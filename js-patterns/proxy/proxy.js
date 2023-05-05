@@ -38,6 +38,7 @@ const userProxy = new Proxy(user, {
       }
     }
 
+    // Only if it returns a truthy value will it actually forward that modification command to the target object.
     return Reflect.set(obj, prop, value);
   },
 });
